@@ -1,0 +1,63 @@
+# Default values for sorry-cypress.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+# hostname: sorry-cypress.example.com
+
+images:
+  mongo:
+    repository: mongo
+    tag: 4.0
+    pullPolicy: IfNotPresent
+  api:
+    repository: agoldis/sorry-cypress-api
+    tag: latest
+    pullPolicy: IfNotPresent
+  dashboard:
+    repository: agoldis/sorry-cypress-dashboard
+    tag: latest
+    pullPolicy: IfNotPresent
+  director:
+    repository: agoldis/sorry-cypress-director
+    tag: latest
+    pullPolicy: IfNotPresent
+
+director:
+  config:
+    s3: {}
+    #  accessKey:
+    #  secretKey:
+    #  bucketName:
+    #  regionName:
+    mongodb: {}
+    #  database: sorry-cypress
+    #  uri: mongodb://mongo:27017
+
+service:
+  mongodb:
+    type: ClusterIP
+    port: 27017
+  api:
+    type: ClusterIP
+    port: 4000
+  dashboard:
+    type: ClusterIP
+    port: 8080
+  director:
+    type: ClusterIP
+    port: 1234
+
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hostname: "{{ .Values.hostname }}"
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local

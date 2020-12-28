@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: api
+  labels: {{- include "sorry-cypress.labels" . | nindent 4 }}
+data:
+  MONGODB_DATABASE: {{ template "sorry-cypress.mongodb.database" . }}
+  MONGODB_URI: {{ template "sorry-cypress.mongodb.uri" . }}

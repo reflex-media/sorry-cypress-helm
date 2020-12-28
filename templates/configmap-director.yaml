@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: director
+  labels: {{- include "sorry-cypress.labels" . | nindent 4 }}
+data:
+  AWS_ACCESS_KEY_ID: {{ template "sorry-cypress.s3.accessKey" . }}
+  AWS_SECRET_ACCESS_KEY: {{ template "sorry-cypress.s3.secretKey" . }}
+  S3_BUCKET: {{ template "sorry-cypress.s3.bucketName" . }}
+  S3_REGION: {{ template "sorry-cypress.s3.regionName" . }}
+  MONGODB_DATABASE: {{ template "sorry-cypress.mongodb.database" . }}
+  MONGODB_URI: {{ template "sorry-cypress.mongodb.uri" . }}
+  DASHBOARD_URL: {{ template "sorry-cypress.dashboardUrl" . }}
+  EXECUTION_DRIVER: {{ template "sorry-cypress.director.executionDrivers" . }}
+  SCREENSHOTS_DRIVER: {{ template "sorry-cypress.director.screenshotsDrivers" . }}
