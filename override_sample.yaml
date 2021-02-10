@@ -1,0 +1,12 @@
+hostname: myapp-cypress.example.com
+
+director:
+  config:
+    s3:
+      accessKey: <aws-access-key>
+      secretKey: <aws-secret-key>
+      bucketName: my-org-cypress
+      regionName: ap-southeast-1
+
+ingress:
+  enabled: true
