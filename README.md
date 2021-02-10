@@ -31,7 +31,7 @@ and run `helm install`. Sample for `override.yaml` file provided in this repo:
 $ helm repo add reflex-cypress https://reflex-media.github.io/sorry-cypress-helm/
 "reflex-cypress" has been added to your repositories
 
-$ helm -n myapp install -f override.yaml myapp-cypress reflex-cypress/sorry-cy
+$ helm -n myapp install -f override.yaml myapp-cypress reflex-cypress/sorry-cypress
 ```
 Or you can pass additional arguments to create the namespace in case if the namespace is not present yet `--create-namespace`
 
