@@ -136,7 +136,7 @@ Set ingress paths
 */}}
 {{- define "sorry-cypress.ingress.paths" -}}
 paths:
-  - path: /
+  - path: /dashboard
     backend:
       serviceName: dashboard
       servicePort: {{ .Values.service.dashboard.port }}
@@ -144,7 +144,7 @@ paths:
     backend:
       serviceName: api
       servicePort: {{ .Values.service.api.port }}
-  - path: /director
+  - path: /
     backend:
       serviceName: director
       servicePort: {{ .Values.service.director.port }}
