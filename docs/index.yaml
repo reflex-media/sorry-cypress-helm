@@ -3,12 +3,22 @@ entries:
   sorry-cypress:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-02-10T11:46:10.103366+08:00"
+    created: "2021-08-25T22:17:47.976415+08:00"
     description: A Helm chart to run sorry-cypress on Kubernetes cluster
-    digest: 0e573ab1e34be9e5ced1902a5e2fea69379fab9df6f36767e292b23769ae71ad
+    digest: 5b84116795643d16ebb91e5547837caae10473afd0551af51e2d7d51831e8d7c
+    name: sorry-cypress
+    type: application
+    urls:
+    - https://reflex-media.github.io/sorry-cypress-helm/sorry-cypress-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-08-25T22:17:47.97534+08:00"
+    description: A Helm chart to run sorry-cypress on Kubernetes cluster
+    digest: 892da5d4701e75bfc1a21861cab053db469465db811a21fa46c5f1beaf2f4f18
     name: sorry-cypress
     type: application
     urls:
     - https://reflex-media.github.io/sorry-cypress-helm/sorry-cypress-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-10T11:46:10.102549+08:00"
+generated: "2021-08-25T22:17:47.973843+08:00"
