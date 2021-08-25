@@ -31,6 +31,6 @@ spec:
         - name: GRAPHQL_SCHEMA_URL
           value: {{ template "sorry-cypress.apiUrl" . }}
         - name: PORT
-          value: 8080
+          value: "8080"
         resources: {}
 status: {}
